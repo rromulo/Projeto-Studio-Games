@@ -56,6 +56,7 @@ export default function main(){
     /*_________________SESSAO DEPOIMENTOS___________________*/
     var depoimentos = document.createElement("section");
     depoimentos.setAttribute("class","depoimentos");
+    depoimentos.setAttribute("id","depoimentos")
     main.appendChild(depoimentos);
     var containerDep = document.createElement("div");
     containerDep.setAttribute("class","container");
@@ -91,6 +92,7 @@ export default function main(){
     /*__________________________SEÇÃO SOBRE____________________*/
     //CRIAÇÃO DA DESSÃO SOBRE / CREATION OF SECTION ABOUT
     var about = document.createElement("section");
+    about.setAttribute("id","sobre")
     about.setAttribute("class","sobre");
     main.appendChild(about);
     //CRIAÇÃO DO TITULO DA SESSÃO/ CREATION OF THE TITLE OF THE SECTION
@@ -157,4 +159,20 @@ export default function main(){
     contentP[0].textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, assumenda rem possimus sint, in ullam debitis corrupti dicta aut aspernatur dolorem quod quisquam. Veniam iure ipsum culpa sunt dolorem officiis!.";
     contentP[1].textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, assumenda rem possimus sint, in ullam debitis corrupti dicta aut aspernatur dolorem quod quisquam. Veniam iure ipsum culpa sunt dolorem officiis!.";
     contentP[2].textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, assumenda rem possimus sint, in ullam debitis corrupti dicta aut aspernatur dolorem quod quisquam. Veniam iure ipsum culpa sunt dolorem officiis!.";
+    window.onload = ()=>{
+        const menuLinks = document.querySelectorAll("nav a[href^='#']")
+        menuLinks.forEach((item)=>{
+            item.addEventListener("click",(event)=>{
+                event.preventDefault();
+                const element = event.target;
+                const id = element.getAttribute('href');
+                const to = document.querySelector(id).offsetTop
+                window.scroll({
+                    top:to,
+                    behavior:"smooth",
+                })
+            })
+        })
+
+    }
 }

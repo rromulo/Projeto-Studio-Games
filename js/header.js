@@ -30,7 +30,9 @@ export default function header(){
     }
     //criando textos para os links
     link[0].textContent="Sobre";
+    link[0].setAttribute("href","#sobre")
     link[1].textContent="Depoimentos";
+    link[1].setAttribute("href","#depoimentos")
     link[2].textContent="BAIXAR AGORA";
     link[2].setAttribute("class","destaque")
     //___________________________INSERINDO OS ELEMENTOS
@@ -52,13 +54,6 @@ export default function header(){
     ul.setAttributeNode(classe);
     container.setAttribute("class","container flex");
     
-    //criando atributo href para os links das LI's
-
-    for(let i = 0; i < link.length; i++){
-        var hlink= document.createAttribute("href");
-        hlink.value="#";
-        link[i].setAttributeNode(hlink)
-    }
     //Adicionando elemento de Hover do CSS, dinamicamente
     for(let i = 0; i <link.length; i++){
         link[i].addEventListener("mouseenter",()=>{
