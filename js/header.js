@@ -35,6 +35,7 @@ export default function header(){
     link[1].setAttribute("href","#depoimentos")
     link[2].textContent="BAIXAR AGORA";
     link[2].setAttribute("class","destaque")
+    link[2].setAttribute("href","#")
     //___________________________INSERINDO OS ELEMENTOS
     //ADICIONANDO LINK PARA CADA LI
     for(var i = 0; i<link.length;i++){
