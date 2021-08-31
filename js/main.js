@@ -37,7 +37,7 @@ export default function main(){
     document.body.appendChild(main);
     //APLICANDO MEDIA QUERYS NA SEÇÃO TOPO
     const mediumBpTop = matchMedia('(max-width: 768px)');
-    const changeSizeTop = (mqlTop)=>{
+    const changeSizeTop = mqlTop =>{
         if(mqlTop.matches){
             containerTop.removeChild(imgTop);
             textTop.style.width="100%"
@@ -161,7 +161,7 @@ export default function main(){
     contentP[2].textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, assumenda rem possimus sint, in ullam debitis corrupti dicta aut aspernatur dolorem quod quisquam. Veniam iure ipsum culpa sunt dolorem officiis!.";
     window.onload = ()=>{
         const menuLinks = document.querySelectorAll("nav a[href^='#']")
-        menuLinks.forEach((item)=>{
+        menuLinks.forEach( item =>{
             item.addEventListener("click",(event)=>{
                 event.preventDefault();
                 const element = event.target;
