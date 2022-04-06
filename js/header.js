@@ -15,7 +15,7 @@ export default function header(){
     logo.appendChild(logoHeader)
     var aLogo = document.createElement("a")
     aLogo.setAttribute("href","#")
-    aLogo.innerHTML = `LOGOMARCA`
+    aLogo.innerText = `LOGOMARCA`
     logoHeader.appendChild(aLogo)
 
     //pre-Cria elementos LI para a UL
@@ -37,17 +37,15 @@ export default function header(){
     link[2].setAttribute("class","destaque")
     link[2].setAttribute("href","#")
     //___________________________INSERINDO OS ELEMENTOS
-    //ADICIONANDO LINK PARA CADA LI
+    //ADICIONANDO LINK PARA CADA LI e inserindo elementos LI dentro da ul
     for(var i = 0; i<link.length;i++){
         li[i].appendChild(link[i])
+        ul.appendChild(li[i]);
     }
     header.appendChild(container);
     container.appendChild(nav);
     nav.appendChild(ul);
-    //inserindo elementos LI dentro da ul
-    for(var i = 0; i<link.length;i++){
-        ul.appendChild(li[i]);
-    }
+ 
     //________________________FIM INSERINDO OS ELEMENTOS
     //utilizando do createAttribute() e setAttributeNode()
     var classe= document.createAttribute("class");
@@ -56,7 +54,7 @@ export default function header(){
     container.setAttribute("class","container flex");
     
     //Adicionando elemento de Hover do CSS, dinamicamente
-    for(let i = 0; i <link.length; i++){
+    for(let i in link){
         link[i].addEventListener("mouseenter",()=>{
             link[i].style.color="#99BD15";
         })

@@ -71,17 +71,17 @@ export default function footer(){
     linksFooter[1].setAttribute("href","https://www.linkedin.com/in/romulo-rodrigues-4164301a7/");
     linksFooter[2].setAttribute("href","https://github.com/rromulo");
 
-    //CRIANDO OS ICONES E DANDO ATRIBUTOS
+    //CRIANDO OS ICONES, DANDO ATRIBUTOS e inserindo nos links
     var iconFooter = [];
     for(let i = 0; i<linksFooter.length; i++){
         iconFooter[i] = document.createElement("i");
+        linksFooter[i].appendChild(iconFooter[i]);
+
     }
     iconFooter[0].setAttribute("class","fa fa-instagram");
     iconFooter[1].setAttribute("class","fa fa-linkedin");
     iconFooter[2].setAttribute("class","fa fa-github");
-    linksFooter[0].appendChild(iconFooter[0]);
-    linksFooter[1].appendChild(iconFooter[1]);
-    linksFooter[2].appendChild(iconFooter[2]);
+
 
     //ACRESCENTANDO PARAGRAFO PARA O FOOTER
     var pSocial = document.createElement("p");

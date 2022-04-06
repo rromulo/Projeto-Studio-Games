@@ -69,6 +69,7 @@ section.topo{
     background-color: white;
     padding: 90px 2%;
 }
+
 .textoTopo{
     width: 50%;
 }
@@ -122,7 +123,7 @@ section.depoimentos{
     color: #84a800;
 }
 /*__________________FIM SESSAO DEPOIMENTOS_______________________*/
-/*SESSAO SOBRE*/
+/*_________________SESSAO SOBRE__________________________________*/
 section.sobre{
     padding: 40px 2%;
 }
@@ -134,7 +135,7 @@ section.sobre{
     display: inline-block;
 }
 .about_single{
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
 }
 .title_single{
     padding: 20px 0;
